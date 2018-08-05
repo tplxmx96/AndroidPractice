@@ -10,7 +10,7 @@ Activity的生命周期作用
 
 Activity生命周期方法
 |    Method    |                   Description                    |    Killable   |            Next           |
-| :---------- :| :----------------------------------------------: | :-----------: | :-----------------------: |
+| :----------- | :----------------------------------------------: | ------------: | ------------------------: |
 |   onCreate   |当启动新的Activity的时候被调用                       |      No       | onStart()                 |
 |   onStart    |当Activity对用户即将可见时调用                       |      No       | onResume()  or onStop()   |
 |   onRestart  |重新启动Activity时调用此方法是重启留在缓存中的Activity |      No       | onStart()                 |
@@ -81,9 +81,3 @@ Activity示例:
     }
 
 ```
-
-#### ListView的使用
-
-
-
-####
