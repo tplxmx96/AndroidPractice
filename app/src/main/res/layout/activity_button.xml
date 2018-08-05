@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#aa0000"
+        android:background="#0a0a00"
+        />
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_name01"
+        android:layout_below="@+id/btn"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="#00aaaa"
+        android:background="#999999"
+
+        />
+
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn04"
+        android:layout_below="@+id/btn02"
+        android:background="#aaddcc"
+        android:hint="@string/btn_mane02"
+        android:textColor="#00aa00"
+        android:textStyle="bold|normal" />
+
+    <Button
+        android:id="@+id/btn04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_name03"
+        android:layout_below="@+id/btn03"
+        android:autoLink="web"
+        android:layout_margin="1mm"
+        />
+
+</RelativeLayout>

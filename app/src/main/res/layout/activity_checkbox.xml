@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_name"
+
+        />
+    <CheckBox
+        android:id="@+id/cd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hobby1"
+        android:layout_below="@+id/tv_hobby"
+        />
+    <CheckBox
+        android:id="@+id/cd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hoppy2"
+        android:layout_below="@+id/cd1"
+        />
+    <CheckBox
+        android:id="@+id/cd3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hoppy3"
+        android:layout_below="@+id/cd2"
+        />
+    <Button
+        android:id="@+id/btn_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_name1"
+        android:layout_below="@+id/cd3"
+        android:onClick="click"
+
+        />
+    <CheckBox
+        android:id="@+id/cd_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cd_all"
+        android:layout_below="@+id/btn_true"
+        android:onClick="click"/>
+</RelativeLayout>

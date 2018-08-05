@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_word"
+        android:textColor="#aa0000"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:singleLine="true"
+        android:drawableBottom="@mipmap/ic_launcher"
+        />
+    <TextView
+        android:id="@+id/tv02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv02_name"
+        android:layout_below="@+id/tv01"
+        android:autoLink="phone"/>
+    <TextView
+        android:id="@+id/tv03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv03_name"
+        android:layout_below="@+id/tv02"
+        android:autoLink="web"/>
+
+    <TextView
+        android:id="@+id/tv04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv04_name"
+        android:layout_below="@id/tv03"
+        android:autoLink="email"/>
+    <!--android:text  表示设置TextView控件的文本信息  @string
+        android:textColor 表示设置TextView控件中文本字体颜色  RGB形式
+        android:textSize   表示设置TextView控件中文本字体大小  单位使用sp
+        android:textStyle  表示设置TextView控件中文本字体样式 bold  表示加粗 |italic 表示斜体
+        android:singleLine="true" 设置为true表示TextView中的文本单行显示
+        android:drawableTop  表示设置TextView控件上方显示的图片    @drawable/xxxx
+        android:drawableBorrom  表示设置TextView控件下方显示的图片
+        android:drawableLeft    表示设置TextView控件左侧显示的图片
+        android:drawableRight   表示设置TextView控件右侧显示的图片
+
+        android:autoLink  表示TextView中的文本添加可点击的超链接
+        none 什么都不添加  web email 邮箱地址 map 地图 all添加所有
+
+
+
+
+    -->
+</RelativeLayout>

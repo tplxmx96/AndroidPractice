@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--文本输入框-->
+    <EditText
+        android:id="@+id/et01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入内容"
+        android:imeOptions="actionGo"
+        android:inputType="textPassword" />
+
+    <EditText
+
+        android:id="@+id/et02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et01"
+        android:hint="请输入内容"
+        android:imeOptions="actionSearch"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/et03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et02"
+        android:hint="请输入内容"
+        android:imeOptions="actionSend"
+        android:inputType="number"
+
+        />
+    <!--android:hint  设置文本框的提示信息
+        android:maxLength  设置当前文本框输入的最大字符长度
+        android:password  设置为true表示设置为密码框
+
+        android:inputType  设置当前文本框的输入类型  软键盘的弹出类型
+        android:inputType  密码框
+        textEmailAddress  邮箱地址
+        number  数字键盘
+        android:imeOptions 设置软键盘中的完成键为相应的功能键
+    -->
+
+</RelativeLayout>

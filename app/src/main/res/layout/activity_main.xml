@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="github.io.tplxmx96.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aa0000"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aa0000"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aa0000"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aa0000"
+        android:text="Hello World!"
+        />
+    <!--android:background 设置背景
+        android:layout_width   设置view的宽度
+        android:layout_height   设置view的高度
+            -wrap_content  表示包裹内容
+            -match_parent   表示填充父控件
+            -指定固定的值 用数字表示相应的像素   dp 单位
+        android:orietation= **  表示设置线性布局控件的摆放方向 horizontal 默认水平 vertcal 竖立方向
+    -->
+
+
+</LinearLayout>

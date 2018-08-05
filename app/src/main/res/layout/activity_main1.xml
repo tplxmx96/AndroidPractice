@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="-10mm"
+        android:gravity="center"
+        android:text="@string/hello_word"
+
+        android:drawableTop="@mipmap/ic_launcher"
+        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:textSize="20sp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="世界那么大我想去看看"
+        android:gravity="left"
+        android:includeFontPadding="true"
+
+        />
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:text="@string/hello_word"
+       />
+
+</LinearLayout>

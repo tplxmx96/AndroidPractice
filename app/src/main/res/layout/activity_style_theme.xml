@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--在标签中引用style  style="@style/xxx" 表示引用当前指定id的样式
+    注意：如果控件标签中即存在引用样式也存在属性设置 以属性设置为准
+    -->
+
+    <Button
+        android:id="@+id/button01"
+        style="@style/button_style"
+        android:text="@string/button_name"
+        android:textColor="#00aa00"
+        />
+    <Button
+        android:id="@+id/button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_name"
+        style="@style/button_style2"
+        />
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_name"
+        style="@style/button_style.btnStyle"/>
+
+
+
+</LinearLayout>

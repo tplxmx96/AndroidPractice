@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">TP练习Demo</string>
+    <string name="hello_word">Hello Word!</string>
+    <string name="action_add">增大字体</string>
+    <string name="action_sub">减小字体</string>
+    <!--演示ContextMenu   上下文菜单-->
+    <string name="action_width">获取控件的宽度</string>
+    <string name="action_height">获取控件的高度</string>
+    <!--演示options_menu   选项菜单-->
+    <string name="action_settings">Settings</string>
+    <string name="action_search">搜索</string>
+    <!--演示listview的基本使用-->
+    <string-array name="citys">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深圳</item>
+        <item>河北</item>
+        <item>天津</item>
+    </string-array>
+    <!--演示启动AsyncTask下载网络图片显示下载进度-->
+    <string name="downLoad">点击下载图片</string>
+    <!--演示隐式启动-->
+    <string name="button_name1">隐式启动</string>
+    <string name="button_name2">隐式启动其他应用中的组件</string>
+    <!--intent属性的演示-->
+    <string name="start_name">启动Activity</string>
+    <string name="call_phone">拨打电话</string>
+    <string name="send_email">发送短信</string>
+    <string name="openview">打开网页</string>
+    <string name="play_name">播放音频</string>
+    <!--Acativity的启动模式-->
+    <string name="btn_name11">启动Activity11</string>
+    <string name="btn_name12">启动Activity12</string>
+    <!--演示Task-->
+    <string name="btn_name8">点击启动OtherActivity</string>
+    <string name="btn_content">点击启动发送短信界面</string>
+    <!--Application-->
+    <string name="btn_name7">点击传值</string>
+    <!--//Activity之间通过Bundle传值-->
+    <string name="btn_name6">点击传值</string>
+    <!--Activity之间通过intent传值-->
+    <string name="btn_name5">点击传值</string>
+    <!--demo 5-->
+    <string name="btn_name002">点击跳转</string>
+    <!--Otheractivity-->
+    <string name="tv_show">我是OtherAcitvity</string>
+    <string name="btn_name001">点击跳转</string>
+    <!--demo 4-->
+    <string name="button_name">点击</string>
+    <!--AutoCompleteTextView-->
+    <string-array name="country">
+        <item>Afghanistan</item>
+        <item>Alanian</item>
+        <item>Algeria</item>
+        <item>American</item>
+        <item>Andorra</item>
+        <item>Anguilla</item>
+    </string-array>
+    <!-- 定义字符串类型的数组 -->
+    <string-array name="plantes_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <!--demo 1 -->
+    <string name="tv02_name">15526455020</string>
+    <string name="tv03_name">www.baidu.com</string>
+    <string name="tv04_name">shi_qian_qian@163.com</string>
+    <!--demo 2 -->
+    <string name="app_name1">ButtonDemo1</string>
+    <string name="action_settings1">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bution_name">点击</string>
+    <string name="button_name01">再次点击</string>
+    <!--demo 3 -->
+    <string name="btn_name">点击</string>
+    <string name="btn_name01">再次点击</string>
+    <string name="btn_mane02">点击两次成功，请点以下链接</string>
+    <string name="btn_name03">www.baidu.com</string>
+    <!--SwitchDemo-->
+    <string name="last_name">上一张</string>
+    <string name="next_name">下一张</string>
+    <!--RadioButton-->
+    <string name="tv_name">您是帅锅还是美妞？</string>
+    <string name="man_name">帅锅</string>
+    <string name="woman_name">美妞</string>
+    <string name="other_name">其他</string>
+    <string name="btn_ok">确定</string>
+    <!--checkBox-->
+    <string name="cb_name">请选择您的爱好:</string>
+    <string name="hobby1">敲代码</string>
+    <string name="hoppy2">打游戏</string>
+    <string name="hoppy3">看书</string>
+    <string name="btn_name1">确定</string>
+    <string name="cd_all">全选</string>
+    <!--Toast-->
+    <string name="btn_name2">点击弹出Toast</string>
+    <string name="btn_name3">点击更改Toast的位置</string>
+
+
+
+</resources>
+
