@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="github.io.tplxmx96">
     <!--添加拨打电话的权限-->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
     <!--访问网络的权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
@@ -13,32 +14,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListActivity">
+        <activity android:name=".IntentActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ListActivity"/>
         <activity android:name=".LifecycleActivity"/>
         <activity android:name=".OtherActivity">
+
             <!--android:configChanges="orientation|keyboardHidden|screenSize">-->
             <intent-filter>
-                <action android:name="github.io.demo"/>
+                <!--<action android:name="github.io.demo"/>-->
                 <action android:name="github.io.action"/>
-                <action android:name="github.io.intent"/>
-                <action android:name="github.io"/>
+
                 <!--默认分类-->
                 <category android:name="android.intent.category.DEFAULT"/>
-                <!--scheme://host:port/path  io://github:90/res-->
+                <!--scheme://host:port/path  io://github:90/res   port端口90  path必须加/  /res-->
                 <data android:scheme="io" android:host="github"/>
-                <data android:port="90"/>
+                <data android:port= "90"/>
                 <data android:path="/res"/>
                 <data android:mimeType="text/*"/>
             </intent-filter>
         </activity>
 
         <activity android:name=".ResultActivity" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="github.io.intent"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
 
         </activity>
     </application>

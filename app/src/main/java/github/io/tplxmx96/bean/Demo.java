@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import github.io.tplxmx96.LifecycleActivity;
+import github.io.tplxmx96.MainActivity;
 
 /**
  * Created by yuweichen on 2018/8/5.
@@ -40,6 +41,31 @@ public class Demo {
         Demo demo2 = new Demo();
         demo2.setName("Intent测试(隐式 & 显示)");
         demos.add(demo2);
+
+        Demo demo3 = new Demo();
+        demo3.setName("Activity的启动模式");
+        demos.add(demo3);
+
+        Demo demo4 = new Demo();
+        demo4.setName("布局文件的深入学习");
+        demos.add(demo4);
+
+        Demo demo5 = new Demo();
+        demo5.setName("Handler & Lopper & Message的深入学习");
+        demos.add(demo5);
+
+        Demo demo6 = new Demo();
+        demo6.setName("onTouch的事件传递过程");
+        demos.add(demo6);
+
+        Demo demo7 = new Demo();
+        demo7.setName("View的绘制原理");
+        demos.add(demo7);
+
+        Demo demo8 = new Demo();
+        demo8.setName("ListView练习");
+        demo8.setClz(MainActivity.class);
+        demos.add(demo8);
 
         return demos;
     }

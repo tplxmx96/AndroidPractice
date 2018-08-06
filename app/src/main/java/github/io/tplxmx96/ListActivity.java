@@ -1,5 +1,6 @@
 package github.io.tplxmx96;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,10 +36,20 @@ public class ListActivity extends AppCompatActivity{
 
                 Intent intent = new Intent();
                 intent.setClass(ListActivity.this,demo.getClz());
-
                 startActivity(intent);
             }
         });
 
     }
+    public void click(View view){
+        switch (view.getId()){
+            case R.id.btn_start:
+                Intent intent1 = new Intent();
+                ComponentName componentName = new ComponentName(ListActivity.this,OtherActivity.class);
+                intent1.setComponent(componentName);
+                startActivity(intent1);
+                break;
+        }
+    }
+
 }

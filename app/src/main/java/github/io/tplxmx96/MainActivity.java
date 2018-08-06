@@ -2,9 +2,11 @@ package github.io.tplxmx96;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Gravity;
@@ -13,89 +15,210 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private View contentView;
-    private PopupWindow mWindow;
-    private ImageView ivReturn, ivCollect, ivShare;
+import github.io.tplxmx96.adapter.TestAdapter;
+import github.io.tplxmx96.bean.Test;
 
+public class MainActivity extends AppCompatActivity {
+    private ListView listView;
+    private TestAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popupwindow);
-        initView();
+        setContentView(R.layout.activity_listview);
+        listView = findViewById(R.id.listview);
+        adapter = new TestAdapter(this);
 
-    }
+        listView.setAdapter(adapter);
 
-    private void initView() {
-        ivReturn = findViewById(R.id.iv_return);
-        ivCollect = findViewById(R.id.iv_collect);
-        ivShare = findViewById(R.id.iv_share);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Test test = adapter.getItem(position);
+                if (position == 0){
+                    Toast.makeText(MainActivity.this,test.getName() + ", pos:" + position,Toast.LENGTH_LONG).show();
+                }else if (position == 1){
+                    AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+                            .setTitle(test.getName())
+                            .setIcon(R.drawable.images_info1)
+                            .setMessage("呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵")
+                            .setPositiveButton(R.string.btn_ok,null)
+                            .setNegativeButton("取消",null)
+                            .create();
+                    dialog.show();
+                }else if (position == 2){
+                    Test data = new Test();
+                    data.setName("我是被动态创建的数据, 我的位置:" + adapter.getCount());
+                    adapter.addData(data);
+                }else{
 
-        ivReturn.setOnClickListener(this);
-        ivCollect.setOnClickListener(this);
-        ivShare.setOnClickListener(this);
-    }
-
-    private void initPopupWindow() {
-
-        contentView = getLayoutInflater().inflate(R.layout.activity_popupwindow1, null);
-        //contentView：内容视图
-        mWindow = new PopupWindow(contentView,
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        //设置触摸PopupWindow外面的区域时是否可以使得这个PopupWindow消失。
-        mWindow.setOutsideTouchable(true);
-        mWindow.showAsDropDown(ivCollect);
-        //设置背景
-        //mWindow.setBackgroundDrawable(background);
-        //设置PopupWindow是否可以触摸时会有响应
-        //mWindow.setTouchable(true);
-    }
-
-    //处理某个按键的方法
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        switch (keyCode) {
-            case KeyEvent.KEYCODE_MENU://监听menu键
-                //isShowing()：判断PopupWindow是否正在展示
-                if (mWindow.isShowing()) {
-                    //PopupWindow消失的方法
-                    mWindow.dismiss();
-                } else {
-                    //显示PopupWindow---->在某个位置显示
-                    mWindow.showAtLocation(contentView, Gravity.BOTTOM, 0, 0);
-                    //作为下拉视图显示
-                    //mWindow.showAtLocation(anchor,xoff,yoff);
                 }
-                break;
-            case KeyEvent.KEYCODE_BACK://监听返回键
-                if (mWindow.isShowing()) {
-                    mWindow.dismiss();
-                }
-                break;
-        }
 
-        return super.onKeyDown(keyCode, event);
-    }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.iv_collect){
-            initPopupWindow();
-        }
-    }
+            }
+        });
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        listView = findViewById(R.id.listview);
+//        adapter =  new TestAdapter(this);
+//        listView.setAdapter(adapter);
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Test test = adapter.getItem(position);
+//                if (position == 0){
+//                    Toast.makeText(MainActivity.this,test.getName() + ", pos：" + position ,Toast.LENGTH_LONG).show();
+//                }else if (position == 1){
+//                    AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+//                            .setTitle(test.getName())
+//                            .setIcon(R.drawable.images_info1)
+//                            .setMessage("好几个结核杆菌钢结构几号给")
+//                            .setPositiveButton(R.string.btn_ok,null)
+//                            .setNegativeButton("取消",null)
+//                            .create();
+//                    dialog.show();
+//                }else if (position == 2){
+//                    Test data = new Test();
+//                    data.setName("我是被动态创建的数据, 我的位置: " + adapter.getCount());
+//                    adapter.addData(data);
+//                }
+//
+//
+//
+//
+//            }
+//        });
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    private View contentView;
+//    private PopupWindow mWindow;
+//    private ImageView ivReturn, ivCollect, ivShare;
+//
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_popupwindow);
+//        initView();
+//
+//    }
+//
+//    private void initView() {
+//        ivReturn = findViewById(R.id.iv_return);
+//        ivCollect = findViewById(R.id.iv_collect);
+//        ivShare = findViewById(R.id.iv_share);
+//
+//        ivReturn.setOnClickListener(this);
+//        ivCollect.setOnClickListener(this);
+//        ivShare.setOnClickListener(this);
+//    }
+//
+//    private void initPopupWindow() {
+//
+//        contentView = getLayoutInflater().inflate(R.layout.activity_popupwindow1, null);
+//        //contentView：内容视图
+//        mWindow = new PopupWindow(contentView,
+//                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        //设置触摸PopupWindow外面的区域时是否可以使得这个PopupWindow消失。
+//        mWindow.setOutsideTouchable(true);
+//        mWindow.showAsDropDown(ivCollect);
+//        //设置背景
+//        //mWindow.setBackgroundDrawable(background);
+//        //设置PopupWindow是否可以触摸时会有响应
+//        //mWindow.setTouchable(true);
+//    }
+//
+//    //处理某个按键的方法
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        switch (keyCode) {
+//            case KeyEvent.KEYCODE_MENU://监听menu键
+//                //isShowing()：判断PopupWindow是否正在展示
+//                if (mWindow.isShowing()) {
+//                    //PopupWindow消失的方法
+//                    mWindow.dismiss();
+//                } else {
+//                    //显示PopupWindow---->在某个位置显示
+//                    mWindow.showAtLocation(contentView, Gravity.BOTTOM, 0, 0);
+//                    //作为下拉视图显示
+//                    //mWindow.showAtLocation(anchor,xoff,yoff);
+//                }
+//                break;
+//            case KeyEvent.KEYCODE_BACK://监听返回键
+//                if (mWindow.isShowing()) {
+//                    mWindow.dismiss();
+//                }
+//                break;
+//        }
+//
+//        return super.onKeyDown(keyCode, event);
+//    }
+//
+//    @Override
+//    public void onClick(View v) {
+//        if (v.getId() == R.id.iv_collect){
+//            initPopupWindow();
+//        }
+//    }
+//
+//    @Override
+//    public void onPointerCaptureChanged(boolean hasCapture) {
+//
+//    }
+//}
 
 
 //    //演示PopupMenu 弹出菜单

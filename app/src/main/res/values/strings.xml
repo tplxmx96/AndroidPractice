@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">TP练习Demo</string>
     <string name="hello_word">Hello Word!</string>
+    <string name="start_name">启动Activity</string>
+    <string name="intent_name">我是显示intent</string>
+    <string name="button_name1">隐式启动</string>
+    <string name="button_name2">隐式启动其他应用中的组件</string>
+
+
     <string name="action_add">增大字体</string>
     <string name="action_sub">减小字体</string>
+
     <!--演示ContextMenu   上下文菜单-->
     <string name="action_width">获取控件的宽度</string>
     <string name="action_height">获取控件的高度</string>
@@ -21,10 +28,10 @@
     <!--演示启动AsyncTask下载网络图片显示下载进度-->
     <string name="downLoad">点击下载图片</string>
     <!--演示隐式启动-->
-    <string name="button_name1">隐式启动</string>
-    <string name="button_name2">隐式启动其他应用中的组件</string>
+    <!--<string name="button_name1">隐式启动</string>-->
+    <!--<string name="button_name2">隐式启动其他应用中的组件</string>-->
     <!--intent属性的演示-->
-    <string name="start_name">启动Activity</string>
+    <string name="start_name1">启动Activity</string>
     <string name="call_phone">拨打电话</string>
     <string name="send_email">发送短信</string>
     <string name="openview">打开网页</string>

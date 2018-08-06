@@ -15,14 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OtherActivity extends AppCompatActivity{
-    private List<String>list;
-    private ListView iv;
-    private ArrayAdapter<String>adapter;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listview01);
+        setContentView(R.layout.activity_otherintent);
 
     }
 }

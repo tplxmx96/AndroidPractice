@@ -23,10 +23,15 @@ import java.util.Map;
  * Created by yuweichen on 2018/7/9.
  */
 
+/**
+ * 演示intent
+ */
 public class ResultActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_otherintent);
+
     }
 }
 ///**演示gridview的使用
