@@ -4,18 +4,24 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button01"
+        android:id="@+id/btn01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnname01"
-        android:onClick="click"/>
-
+        android:onClick="onClick" />
     <Button
-        android:id="@+id/button02"
+        android:id="@+id/btn02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnname02"
-        android:onClick="click"
-        android:layout_below="@+id/button01"
+        android:layout_below="@+id/btn01"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnname03"
+        android:layout_below="@+id/btn02"
         />
+
 </RelativeLayout>

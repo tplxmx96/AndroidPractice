@@ -3,6 +3,7 @@ package github.io.tplxmx96.bean;
 import java.util.ArrayList;
 import java.util.List;
 
+import github.io.tplxmx96.IntentActivity;
 import github.io.tplxmx96.LifecycleActivity;
 import github.io.tplxmx96.MainActivity;
 
@@ -12,7 +13,7 @@ import github.io.tplxmx96.MainActivity;
 
 public class Demo {
     private String name;
-    private Class clz;
+    private Class clz;  //Activity
 
     public String getName() {
         return name;
@@ -40,10 +41,12 @@ public class Demo {
 
         Demo demo2 = new Demo();
         demo2.setName("Intent测试(隐式 & 显示)");
+        demo2.setClz(IntentActivity.class);
         demos.add(demo2);
 
         Demo demo3 = new Demo();
         demo3.setName("Activity的启动模式");
+        demo3.setClz(MainActivity.class);
         demos.add(demo3);
 
         Demo demo4 = new Demo();

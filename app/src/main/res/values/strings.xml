@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">TP练习Demo</string>
     <string name="hello_word">Hello Word!</string>
+    <string name="btnname01">启动Activity1</string>
+    <string name="btnname02">启动Activity2</string>
+    <string name="btnname03">关闭Activity</string>
+
+
+
+
+
+    <!--演示intent-->
     <string name="start_name">启动Activity</string>
     <string name="intent_name">我是显示intent</string>
     <string name="button_name1">隐式启动</string>

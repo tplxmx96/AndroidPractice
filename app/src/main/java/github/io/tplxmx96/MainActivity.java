@@ -27,45 +27,81 @@ import android.widget.Toast;
 import github.io.tplxmx96.adapter.TestAdapter;
 import github.io.tplxmx96.bean.Test;
 
+/**
+ * 演示Activity的启动模式
+ */
 public class MainActivity extends AppCompatActivity {
-    private ListView listView;
-    private TestAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listview);
-        listView = findViewById(R.id.listview);
-        adapter = new TestAdapter(this);
+        setContentView(R.layout.test_activity);
 
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        findViewById(R.id.btn03).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Test test = adapter.getItem(position);
-                if (position == 0){
-                    Toast.makeText(MainActivity.this,test.getName() + ", pos:" + position,Toast.LENGTH_LONG).show();
-                }else if (position == 1){
-                    AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
-                            .setTitle(test.getName())
-                            .setIcon(R.drawable.images_info1)
-                            .setMessage("呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵")
-                            .setPositiveButton(R.string.btn_ok,null)
-                            .setNegativeButton("取消",null)
-                            .create();
-                    dialog.show();
-                }else if (position == 2){
-                    Test data = new Test();
-                    data.setName("我是被动态创建的数据, 我的位置:" + adapter.getCount());
-                    adapter.addData(data);
-                }else{
-
-                }
-
-
+            public void onClick(View v) {
+                finish();
             }
         });
 
+    }
+    public void onClick(View view){
+        Intent intent = null;
+        switch (view.getId()){
+            case R.id.btn01:
+                intent = new Intent(MainActivity.this,OtherActivity.class);
+                break;
+            case R.id.btn02:
+                intent = new Intent(MainActivity.this,OtherActivity.class);
+                break;
+        }
+        startActivity(intent);
+    }
+}
+
+
+
+
+
+
+//    演示ListView  使用
+//    private ListView listView;
+//    private TestAdapter adapter;
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_listview);
+//        listView = findViewById(R.id.listview);
+//        adapter = new TestAdapter(this);
+//
+//        listView.setAdapter(adapter);
+//
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Test test = adapter.getItem(position);
+//                if (position == 0){
+//                    Toast.makeText(MainActivity.this,test.getName() + ", pos:" + position,Toast.LENGTH_LONG).show();
+//                }else if (position == 1){
+//                    AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+//                            .setTitle(test.getName())
+//                            .setIcon(R.drawable.images_info1)
+//                            .setMessage("呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵")
+//                            .setPositiveButton(R.string.btn_ok,null)
+//                            .setNegativeButton("取消",null)
+//                            .create();
+//                    dialog.show();
+//                }else if (position == 2){
+//                    Test data = new Test();
+//                    data.setName("我是被动态创建的数据, 我的位置:" + adapter.getCount());
+//                    adapter.addData(data);
+//                }else{
+//
+//                }
+//
+//
+//            }
+//        });
+//
 
 
 
@@ -112,8 +148,8 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
-    }
-}
+//    }
+//}
 
 
 
